@@ -1,0 +1,35 @@
+{
+  "name": "@uniswap/merkle-distributor",
+  "author": {
+    "name": "Moody Salem"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.7",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "4.3.2",
+    "@openzeppelin/hardhat-upgrades": "^1.10.0",
+    "@types/chai": "^4.2.6",
+    "@types/mocha": "^5.2.7",
+    "axios": "^0.20.0",
+    "chai": "^4.3.4",
+    "commander": "^6.1.0",
+    "ethereum-waffle": "^3.0.0",
+    "ethereumjs-util": "^7.0.4",
+    "ethers": "^5.4.7",
+    "hardhat": "^2.6.6",
+    "mocha": "^6.2.3",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.0",
+    "solc": "0.6.11",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  },
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "mocha",
+    "generate-merkle-root": "node script/test.js",
+    "generate-merkle-root:example": "ts-node scripts/generate-merkle-root.ts --input scripts/example.json",
+    "prepublishOnly": "yarn test"
+  }
+}
